@@ -59,7 +59,8 @@ echo ""
 # Confirm intent
 read -rp "  Publish all of the above? [y/N] " CONFIRM
 echo ""
-if [[ "${CONFIRM,,}" != "y" ]]; then
+CONFIRM_NORMALIZED="$(printf "%s" "$CONFIRM" | tr "[:upper:]" "[:lower:]")"
+if [[ "$CONFIRM_NORMALIZED" != "y" ]]; then
   echo "  Aborted. Nothing was published."
   exit 0
 fi
