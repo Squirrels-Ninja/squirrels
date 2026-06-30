@@ -296,6 +296,14 @@ After capturing:
 - [ ] Search engine indexing re-enabled (`wp option update blog_public 1`)
 - [ ] Demo URL publicly accessible: `https://demo.squirrels.ninja`
 
+**Before declaring L3 done, run the Go / No-Go gate:**
+
+```
+L3-GO-NO-GO.md
+```
+
+All items in that checklist must pass. The Go/No-Go gate is the authoritative definition of "L3 complete."
+
 ---
 
 ## After L3
