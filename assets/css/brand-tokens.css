@@ -1,0 +1,411 @@
+/**
+ * Squirrels — Brand Design Tokens
+ *
+ * Import this file to access all brand-level CSS custom properties.
+ * The theme's main.css maps these tokens onto --squirrels-* variables.
+ *
+ * @package Squirrels
+ */
+
+:root {
+  /* ============================================================
+   * BRAND COLORS — Primary Palette
+   * ============================================================ */
+
+  /*
+   * TWO-TIER ORANGE SYSTEM (WCAG AA compliant)
+   *
+   * --brand-orange         #E8621A  Display orange — 3.39:1 on white
+   *                                 Use for: icons, decorative marks, large display
+   *                                 headings (≥24px), marketing, hover accents.
+   *                                 Do NOT use for body-text links or button labels
+   *                                 at 16px or smaller.
+   *
+   * --brand-orange-interactive  #C94F10  Accessible orange — 4.56:1 on white (WCAG AA)
+   *                                 Use for: primary button bg (white text),
+   *                                 link color in body copy, focus indicators.
+   */
+
+  /* Display orange — brand mark, icons, decorative */
+  --brand-orange:               #E8621A;
+  --brand-orange-rgb:           232, 98, 26;
+  --brand-orange-hsl:           22deg, 81%, 51%;
+
+  /* Interactive orange — WCAG AA with white text (4.56:1) */
+  --brand-orange-interactive:   #C94F10;
+  --brand-orange-accessible:    #C94F10;  /* alias */
+
+  /* Orange scale */
+  --brand-orange-50:       #FEF2E8;
+  --brand-orange-100:      #FDD9BE;
+  --brand-orange-200:      #FBBF94;
+  --brand-orange-300:      #F8A06A;
+  --brand-orange-400:      #F48040;
+  --brand-orange-500:      #E8621A;  /* base */
+  --brand-orange-600:      #C94F10;
+  --brand-orange-700:      #A63E0A;
+  --brand-orange-800:      #832E05;
+  --brand-orange-900:      #611F01;
+
+  /* Forest Brown — deep text, headings on light bg */
+  --brand-brown:           #2B1506;
+  --brand-brown-rgb:       43, 21, 6;
+  --brand-brown-hsl:       22deg, 76%, 10%;
+
+  /* Nut Tan — warm mid-tone accent, secondary UI elements */
+  --brand-tan:             #C47D2E;
+  --brand-tan-rgb:         196, 125, 46;
+  --brand-tan-hsl:         32deg, 62%, 47%;
+
+  /* Cream — warm light background, surface color */
+  --brand-cream:           #FDF5EC;
+  --brand-cream-rgb:       253, 245, 236;
+  --brand-cream-hsl:       32deg, 88%, 96%;
+
+  /* Charcoal — near-black body text (warm tinted) */
+  --brand-charcoal:        #1A1714;
+  --brand-charcoal-rgb:    26, 23, 20;
+  --brand-charcoal-hsl:    27deg, 13%, 9%;
+
+  /* ============================================================
+   * BRAND COLORS — Neutral Scale
+   * ============================================================ */
+
+  --brand-neutral-0:       #FFFFFF;
+  --brand-neutral-50:      #FAFAF9;
+  --brand-neutral-100:     #F5F4F2;
+  --brand-neutral-200:     #E8E6E2;
+  --brand-neutral-300:     #D5D2CC;
+  --brand-neutral-400:     #B0ABAA;
+  --brand-neutral-500:     #8A8480;
+  --brand-neutral-600:     #635E5A;
+  --brand-neutral-700:     #4A4542;
+  --brand-neutral-800:     #342F2C;
+  --brand-neutral-900:     #1A1714;
+
+  /* ============================================================
+   * BRAND COLORS — Semantic / Functional
+   * ============================================================ */
+
+  /* Success — forest green */
+  --brand-success:         #1A7A3C;
+  --brand-success-light:   #D6F0DF;
+  --brand-success-dark:    #0D4E25;
+
+  /* Warning — warm amber */
+  --brand-warning:         #D4A017;
+  --brand-warning-light:   #FBF0CC;
+  --brand-warning-dark:    #8F6A0A;
+
+  /* Error — deep red */
+  --brand-error:           #B91C1C;
+  --brand-error-light:     #FEE2E2;
+  --brand-error-dark:      #7F1D1D;
+
+  /* Info — steel blue */
+  --brand-info:            #1D5E8C;
+  --brand-info-light:      #DBEAFE;
+  --brand-info-dark:       #1E3A5F;
+
+  /* ============================================================
+   * TYPOGRAPHY — Font Families
+   * ============================================================ */
+
+  /* Headings: Geist by Vercel (https://vercel.com/font) */
+  --font-heading:
+    'Geist',
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+
+  /* Body: Inter (https://rsms.me/inter/) */
+  --font-body:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+
+  /* Monospace: JetBrains Mono (https://www.jetbrains.com/lp/mono/) */
+  --font-mono:
+    'JetBrains Mono',
+    'Fira Code',
+    'Cascadia Code',
+    'Courier New',
+    monospace;
+
+  /* ============================================================
+   * TYPOGRAPHY — Type Scale (px)
+   * ============================================================ */
+
+  --text-2xs:   0.6875rem;   /* 11px */
+  --text-xs:    0.75rem;     /* 12px */
+  --text-sm:    0.875rem;    /* 14px */
+  --text-base:  1rem;        /* 16px */
+  --text-lg:    1.125rem;    /* 18px */
+  --text-xl:    1.25rem;     /* 20px */
+  --text-2xl:   1.5rem;      /* 24px */
+  --text-3xl:   1.875rem;    /* 30px */
+  --text-4xl:   2.25rem;     /* 36px */
+  --text-5xl:   3rem;        /* 48px */
+  --text-6xl:   3.75rem;     /* 60px */
+  --text-7xl:   4.5rem;      /* 72px */
+
+  /* ============================================================
+   * TYPOGRAPHY — Font Weights
+   * ============================================================ */
+
+  --weight-regular:    400;
+  --weight-medium:     500;
+  --weight-semibold:   600;
+  --weight-bold:       700;
+
+  /* ============================================================
+   * TYPOGRAPHY — Line Heights
+   * ============================================================ */
+
+  --leading-tight:    1.2;
+  --leading-snug:     1.35;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.65;
+  --leading-loose:    1.8;
+
+  /* ============================================================
+   * TYPOGRAPHY — Letter Spacing
+   * ============================================================ */
+
+  --tracking-tighter:  -0.04em;
+  --tracking-tight:    -0.02em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.02em;
+  --tracking-wider:    0.05em;
+  --tracking-widest:   0.1em;
+
+  /* ============================================================
+   * SPACING — 4px base grid
+   * ============================================================ */
+
+  --space-0:    0;
+  --space-px:   1px;
+  --space-0-5:  0.125rem;   /* 2px */
+  --space-1:    0.25rem;    /* 4px */
+  --space-1-5:  0.375rem;   /* 6px */
+  --space-2:    0.5rem;     /* 8px */
+  --space-2-5:  0.625rem;   /* 10px */
+  --space-3:    0.75rem;    /* 12px */
+  --space-3-5:  0.875rem;   /* 14px */
+  --space-4:    1rem;       /* 16px */
+  --space-5:    1.25rem;    /* 20px */
+  --space-6:    1.5rem;     /* 24px */
+  --space-7:    1.75rem;    /* 28px */
+  --space-8:    2rem;       /* 32px */
+  --space-10:   2.5rem;     /* 40px */
+  --space-12:   3rem;       /* 48px */
+  --space-14:   3.5rem;     /* 56px */
+  --space-16:   4rem;       /* 64px */
+  --space-20:   5rem;       /* 80px */
+  --space-24:   6rem;       /* 96px */
+  --space-28:   7rem;       /* 112px */
+  --space-32:   8rem;       /* 128px */
+
+  /* ============================================================
+   * BORDER RADIUS
+   * ============================================================ */
+
+  --radius-none:   0;
+  --radius-sm:     0.25rem;    /* 4px  */
+  --radius-md:     0.5rem;     /* 8px  */
+  --radius-lg:     0.75rem;    /* 12px */
+  --radius-xl:     1rem;       /* 16px */
+  --radius-2xl:    1.5rem;     /* 24px */
+  --radius-3xl:    2rem;       /* 32px */
+  --radius-full:   9999px;
+
+  /* Icon background radius (matches brand icon rx=22 on 100px canvas) */
+  --radius-icon:   22%;
+
+  /* ============================================================
+   * SHADOWS — warm-tinted
+   * ============================================================ */
+
+  --shadow-xs:
+    0 1px 2px rgba(43, 21, 6, 0.05);
+
+  --shadow-sm:
+    0 1px 3px rgba(43, 21, 6, 0.08),
+    0 1px 2px rgba(43, 21, 6, 0.05);
+
+  --shadow-md:
+    0 4px 6px rgba(43, 21, 6, 0.08),
+    0 2px 4px rgba(43, 21, 6, 0.05);
+
+  --shadow-lg:
+    0 10px 15px rgba(43, 21, 6, 0.09),
+    0 4px 6px rgba(43, 21, 6, 0.05);
+
+  --shadow-xl:
+    0 20px 25px rgba(43, 21, 6, 0.10),
+    0 10px 10px rgba(43, 21, 6, 0.04);
+
+  --shadow-2xl:
+    0 25px 50px rgba(43, 21, 6, 0.20);
+
+  --shadow-inner:
+    inset 0 2px 4px rgba(43, 21, 6, 0.06);
+
+  --shadow-focus:
+    0 0 0 3px rgba(232, 98, 26, 0.30);
+
+  /* ============================================================
+   * BORDERS
+   * ============================================================ */
+
+  --border-width-thin:    1px;
+  --border-width-normal:  2px;
+  --border-width-thick:   4px;
+
+  --border-color:         var(--brand-neutral-200);
+  --border-color-strong:  var(--brand-neutral-300);
+  --border-color-subtle:  var(--brand-neutral-100);
+
+  /* ============================================================
+   * Z-INDEX SCALE
+   * ============================================================ */
+
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* ============================================================
+   * TRANSITIONS
+   * ============================================================ */
+
+  --ease-in:          cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:         cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:      cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:      cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant:   50ms;
+  --duration-fast:      100ms;
+  --duration-normal:    200ms;
+  --duration-slow:      300ms;
+  --duration-slower:    500ms;
+
+  --transition-base:    var(--duration-normal) var(--ease-in-out);
+  --transition-fast:    var(--duration-fast) var(--ease-in-out);
+  --transition-spring:  var(--duration-slow) var(--ease-spring);
+
+  /* ============================================================
+   * LAYOUT — Breakpoints (reference — use in media queries)
+   *
+   *  sm:  640px  — large mobile / small tablet
+   *  md:  768px  — tablet
+   *  lg:  1024px — small desktop
+   *  xl:  1280px — standard desktop
+   * 2xl:  1536px — large desktop
+   * ============================================================ */
+
+  /* Content max-widths */
+  --width-prose:       65ch;
+  --width-content:     720px;
+  --width-wide:        1100px;
+  --width-full:        1440px;
+
+  /* ============================================================
+   * COMPONENT TOKENS — Buttons
+   * ============================================================ */
+
+  /* Primary */
+  --btn-primary-bg:       var(--brand-orange);
+  --btn-primary-text:     #FFFFFF;
+  --btn-primary-bg-hover: var(--brand-orange-600);
+  --btn-primary-radius:   var(--radius-md);
+  --btn-primary-shadow:   var(--shadow-sm);
+
+  /* Secondary */
+  --btn-secondary-bg:       var(--brand-cream);
+  --btn-secondary-text:     var(--brand-charcoal);
+  --btn-secondary-border:   var(--brand-neutral-200);
+  --btn-secondary-bg-hover: var(--brand-neutral-100);
+
+  /* Ghost */
+  --btn-ghost-text:         var(--brand-orange);
+  --btn-ghost-bg-hover:     var(--brand-orange-50);
+
+  /* Destructive */
+  --btn-destructive-bg:     var(--brand-error);
+  --btn-destructive-text:   #FFFFFF;
+
+  /* Shared button properties */
+  --btn-padding-y:     0.625rem;  /* 10px */
+  --btn-padding-x:     1.25rem;   /* 20px */
+  --btn-font-size:     var(--text-sm);
+  --btn-font-weight:   var(--weight-medium);
+  --btn-line-height:   1.25;
+  --btn-transition:    var(--transition-fast);
+
+  /* ============================================================
+   * COMPONENT TOKENS — Cards
+   * ============================================================ */
+
+  --card-bg:           #FFFFFF;
+  --card-border:       var(--brand-neutral-200);
+  --card-radius:       var(--radius-lg);
+  --card-shadow:       var(--shadow-sm);
+  --card-shadow-hover: var(--shadow-md);
+  --card-padding:      var(--space-6);
+  --card-translate-hover: translateY(-2px);
+
+  /* ============================================================
+   * COMPONENT TOKENS — Forms
+   * ============================================================ */
+
+  --input-bg:              #FFFFFF;
+  --input-border:          var(--brand-neutral-300);
+  --input-border-focus:    var(--brand-orange);
+  --input-shadow-focus:    var(--shadow-focus);
+  --input-radius:          var(--radius-md);
+  --input-padding-y:       0.5rem;
+  --input-padding-x:       0.75rem;
+  --input-font-size:       var(--text-base);
+  --input-text:            var(--brand-charcoal);
+  --input-placeholder:     var(--brand-neutral-500);
+  --input-label-size:      var(--text-sm);
+  --input-label-weight:    var(--weight-medium);
+  --input-label-color:     var(--brand-neutral-700);
+
+  /* ============================================================
+   * COMPONENT TOKENS — Navigation
+   * ============================================================ */
+
+  --nav-height:        64px;
+  --nav-bg:            #FFFFFF;
+  --nav-border:        var(--brand-neutral-100);
+  --nav-link-color:    var(--brand-neutral-700);
+  --nav-link-hover:    var(--brand-charcoal);
+  --nav-active-color:  var(--brand-orange);
+  --nav-font-size:     var(--text-sm);
+  --nav-font-weight:   var(--weight-medium);
+
+  /* ============================================================
+   * COMPONENT TOKENS — Code Blocks
+   * ============================================================ */
+
+  --code-bg:           var(--brand-charcoal);
+  --code-text:         var(--brand-neutral-100);
+  --code-comment:      var(--brand-neutral-500);
+  --code-keyword:      var(--brand-orange-300);
+  --code-string:       #A8E6CF;
+  --code-number:       var(--brand-tan);
+  --code-radius:       var(--radius-lg);
+  --code-padding:      var(--space-6);
+  --code-font-size:    var(--text-sm);
+}

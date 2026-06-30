@@ -1,0 +1,28 @@
+{
+    "name": "Creative Portfolio",
+    "version": "1.0.0",
+    "pages": [
+        {
+            "title": "Home",
+            "slug": "home-portfolio",
+            "front_page": true,
+            "content": "<!-- wp:heading {\"textAlign\":\"center\",\"level\":1} -->\n<h1 class=\"wp-block-heading has-text-align-center\">Creative Work</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\">Design, photography, and digital experiences.</p>\n<!-- /wp:paragraph -->"
+        },
+        {
+            "title": "Portfolio",
+            "slug": "portfolio",
+            "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Selected Work</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>A curated selection of projects.</p>\n<!-- /wp:paragraph -->"
+        },
+        {
+            "title": "Contact",
+            "slug": "contact-portfolio",
+            "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Let's Work Together</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Available for freelance projects and collaborations.</p>\n<!-- /wp:paragraph -->"
+        }
+    ],
+    "theme_mods": {
+        "squirrels_primary_color": "#6c3fc5",
+        "squirrels_accent_color": "#f39c12",
+        "squirrels_sidebar_position": "none",
+        "squirrels_body_font_size": "16"
+    }
+}

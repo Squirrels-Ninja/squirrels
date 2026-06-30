@@ -1,0 +1,274 @@
+/*
+ * Squirrels — Main Stylesheet
+ * Version: 1.0.0
+ *
+ * Brand tokens are defined in brand-tokens.css and mapped here onto
+ * the --squirrels-* variables consumed by theme templates.
+ */
+
+/* Theme variables — map brand tokens to runtime customizer values */
+:root {
+    /*
+     * Overridden at runtime by the Customizer (wp_head inline style).
+     * Default to accessible orange (#C94F10, 4.56:1 on white, WCAG AA)
+     * rather than display orange (#E8621A, 3.39:1 — fails for body text).
+     * The brand mark/icon uses #E8621A directly in SVG — not via this var.
+     */
+    --squirrels-primary:          #C94F10;
+    --squirrels-accent:           #B91C1C;
+    --squirrels-font-size:        16px;
+
+    /* Static theme layout tokens */
+    --squirrels-text:             #1A1714;
+    --squirrels-bg:               #FFFFFF;
+    --squirrels-surface:          #FDF5EC;
+    --squirrels-border:           #E8E6E2;
+    --squirrels-container-width:  1200px;
+    --squirrels-gap:              2rem;
+
+    /* Typography */
+    --squirrels-font-heading:
+        'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --squirrels-font-body:
+        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --squirrels-font-mono:
+        'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+    /* Radius */
+    --squirrels-radius-sm:   4px;
+    --squirrels-radius-md:   8px;
+    --squirrels-radius-lg:   12px;
+    --squirrels-radius-full: 9999px;
+
+    /* Shadows */
+    --squirrels-shadow-sm:
+        0 1px 3px rgba(43,21,6,0.08), 0 1px 2px rgba(43,21,6,0.05);
+    --squirrels-shadow-md:
+        0 4px 6px rgba(43,21,6,0.08), 0 2px 4px rgba(43,21,6,0.05);
+    --squirrels-shadow-focus:
+        0 0 0 3px rgba(232,98,26,0.30);
+}
+
+/* Reset & Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: var(--squirrels-font-size); }
+body {
+    margin: 0;
+    font-family: var(--squirrels-font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--squirrels-text);
+    background: var(--squirrels-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--squirrels-font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--squirrels-text);
+}
+
+code, pre, kbd, samp {
+    font-family: var(--squirrels-font-mono);
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--squirrels-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    left: -9999em;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: .75rem 1.5rem;
+    background: var(--squirrels-primary);
+    color: #fff;
+    font-size: 1rem;
+    z-index: 99999;
+    outline: none;
+}
+
+/* Container */
+.squirrels-container {
+    max-width: var(--squirrels-container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--squirrels-gap);
+}
+
+/* Site */
+.squirrels-site { display: flex; flex-direction: column; min-height: 100vh; }
+.squirrels-site-content { flex: 1; padding: 2rem 0; }
+
+/* Header */
+.squirrels-header {
+    background: var(--squirrels-primary);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+.squirrels-header .squirrels-container {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.squirrels-site-branding a { color: #fff; text-decoration: none; }
+.squirrels-site-title { margin: 0; font-size: 1.5rem; font-weight: 700; }
+.squirrels-site-description { margin: 0; font-size: .85rem; opacity: .8; }
+
+/* Navigation */
+.squirrels-main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.squirrels-main-navigation a {
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 500;
+    padding: .25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color .2s;
+}
+.squirrels-main-navigation a:hover { text-decoration: none; border-bottom-color: #fff; }
+.squirrels-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.6);
+    color: #fff;
+    padding: .4rem .8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+/* Content & Sidebar */
+.squirrels-content-area {
+    flex: 1;
+    min-width: 0;
+}
+.squirrels-widget-area {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+/* Posts */
+.squirrels-post {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--squirrels-border);
+}
+.squirrels-post:last-child { border-bottom: none; }
+.squirrels-entry-title { margin: 0 0 .5rem; }
+.squirrels-entry-title a { color: var(--squirrels-text); }
+.squirrels-entry-title a:hover { color: var(--squirrels-primary); }
+.squirrels-post-thumbnail { margin: 0 0 1rem; }
+.squirrels-post-thumbnail img { border-radius: 4px; }
+.squirrels-entry-meta, .squirrels-posted-on, .squirrels-byline {
+    font-size: .85rem;
+    color: #666;
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+.squirrels-entry-footer { margin-top: 1rem; font-size: .85rem; color: #666; }
+.squirrels-entry-footer span + span::before { content: ' | '; }
+
+/* Page header */
+.squirrels-page-header { margin-bottom: 1.5rem; }
+.squirrels-page-header .page-title { border-bottom: 2px solid var(--squirrels-primary); padding-bottom: .5rem; }
+
+/* Widgets */
+.widget { margin-bottom: 2rem; }
+.widget-title { font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid var(--squirrels-primary); padding-bottom: .5rem; margin-bottom: 1rem; }
+.widget ul { list-style: none; margin: 0; padding: 0; }
+.widget ul li { padding: .3rem 0; border-bottom: 1px solid var(--squirrels-border); }
+
+/* Comments */
+.squirrels-comments-area { margin-top: 2rem; }
+.squirrels-comments-title { margin-bottom: 1.5rem; }
+.squirrels-comment-list { list-style: none; padding: 0; }
+.squirrels-comment-list .comment { padding: 1rem 0; border-bottom: 1px solid var(--squirrels-border); }
+
+/* Footer */
+.squirrels-footer {
+    background: #1a1a1a;
+    color: #ccc;
+    padding: 3rem 0 1.5rem;
+    margin-top: auto;
+}
+.squirrels-footer-widgets {
+    display: flex;
+    gap: var(--squirrels-gap);
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.squirrels-footer-widget-area { flex: 1; min-width: 200px; }
+.squirrels-footer .widget-title { color: #fff; border-bottom-color: var(--squirrels-accent); }
+.squirrels-footer a { color: #aaa; }
+.squirrels-footer a:hover { color: #fff; }
+.squirrels-site-info {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+    font-size: .85rem;
+    color: #666;
+}
+.squirrels-site-info a { color: #888; }
+
+/* WooCommerce basic integration */
+.squirrels-woocommerce .woocommerce { max-width: 100%; }
+.woocommerce .button,
+.woocommerce button.button,
+.woocommerce input.button {
+    background: var(--squirrels-primary) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: .6rem 1.2rem !important;
+    font-size: .9rem !important;
+    cursor: pointer !important;
+    transition: opacity .2s !important;
+}
+.woocommerce .button:hover { opacity: .85 !important; }
+.woocommerce span.onsale {
+    background: var(--squirrels-accent) !important;
+}
+.woocommerce ul.products li.product .price { color: var(--squirrels-primary); }
+
+/* Sidebar layout helpers */
+.squirrels-has-sidebar .squirrels-container { flex-direction: row; }
+body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; margin: 0 auto; }
+
+/* Error 404 */
+.squirrels-error-404 { padding: 2rem 0; }
+
+/* Responsive */
+@media ( max-width: 768px ) {
+    .squirrels-header .squirrels-container { flex-wrap: wrap; }
+    .squirrels-menu-toggle { display: block; }
+    .squirrels-main-navigation ul { display: none; flex-direction: column; gap: .5rem; width: 100%; padding-top: 1rem; }
+    .squirrels-main-navigation.toggled ul { display: flex; }
+    .squirrels-widget-area { width: 100%; }
+    .squirrels-container { flex-direction: column !important; }
+    .squirrels-footer-widgets { flex-direction: column; }
+}

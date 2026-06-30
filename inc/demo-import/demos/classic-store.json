@@ -1,0 +1,33 @@
+{
+    "name": "Classic Store",
+    "version": "1.0.0",
+    "pages": [
+        {
+            "title": "Home",
+            "slug": "home",
+            "front_page": true,
+            "content": "<!-- wp:heading {\"textAlign\":\"center\",\"level\":1} -->\n<h1 class=\"wp-block-heading has-text-align-center\">Welcome to Our Store</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\">Discover our curated collection of quality products.</p>\n<!-- /wp:paragraph -->"
+        },
+        {
+            "title": "Shop",
+            "slug": "shop",
+            "content": "<!-- wp:shortcode -->[products limit=\"12\" columns=\"3\"]<!-- /wp:shortcode -->"
+        },
+        {
+            "title": "About",
+            "slug": "about",
+            "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">About Us</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>We are passionate about bringing you the best products at great prices.</p>\n<!-- /wp:paragraph -->"
+        },
+        {
+            "title": "Contact",
+            "slug": "contact",
+            "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Contact Us</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>Get in touch with our team.</p>\n<!-- /wp:paragraph -->"
+        }
+    ],
+    "theme_mods": {
+        "squirrels_primary_color": "#0073aa",
+        "squirrels_accent_color": "#e74c3c",
+        "squirrels_sidebar_position": "right",
+        "squirrels_body_font_size": "16"
+    }
+}

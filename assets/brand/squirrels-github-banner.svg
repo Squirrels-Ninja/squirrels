@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-label="Squirrels — WordPress theme">
+  <!-- Background: deep charcoal (works well on GitHub's dark/light interfaces) -->
+  <rect width="1280" height="640" fill="#1A1714"/>
+
+  <!-- Subtle dot grid texture overlay -->
+  <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1" fill="white" opacity="0.04"/>
+  </pattern>
+  <rect width="1280" height="640" fill="url(#dots)"/>
+
+  <!-- Large decorative icon (background, very low opacity) -->
+  <g transform="translate(780, -80) scale(8)" opacity="0.05">
+    <path d="M 44 70 C 66 70 78 56 78 42 C 78 26 64 14 50 16"
+          fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="50" cy="16" r="11" fill="white"/>
+    <ellipse cx="28" cy="64" rx="13" ry="12" fill="white"/>
+    <circle cx="28" cy="42" r="14" fill="white"/>
+    <polygon points="17,34 19,15 28,32" fill="white"/>
+    <polygon points="28,31 37,14 39,33" fill="white"/>
+  </g>
+
+  <!-- Left: icon 128×128 -->
+  <g transform="translate(96, 244) scale(1.28)">
+    <rect width="100" height="100" rx="22" fill="#E8621A"/>
+    <path d="M 44 70 C 66 70 78 56 78 42 C 78 26 64 14 50 16"
+          fill="none" stroke="white" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="50" cy="16" r="11" fill="white"/>
+    <ellipse cx="28" cy="64" rx="13" ry="12" fill="white"/>
+    <circle cx="28" cy="42" r="14" fill="white"/>
+    <polygon points="17,34 19,15 28,32" fill="white"/>
+    <polygon points="28,31 37,14 39,33" fill="white"/>
+    <polygon points="18.5,33 20,20 27,31" fill="#E8621A" opacity="0.38"/>
+    <polygon points="28.5,31 36,19 37.5,32" fill="#E8621A" opacity="0.38"/>
+    <circle cx="35" cy="39" r="3.5" fill="#E8621A"/>
+    <circle cx="36.2" cy="37.8" r="1.2" fill="white"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="264" y="318"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="600"
+        font-size="88"
+        letter-spacing="-2"
+        fill="white">squirrels</text>
+
+  <!-- Tagline -->
+  <text x="264" y="374"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="400"
+        font-size="26"
+        letter-spacing="0.5"
+        fill="white" opacity="0.5">Fast. Curious. Thoughtfully Built.</text>
+
+  <!-- Bottom: feature pills -->
+  <!-- WordPress -->
+  <rect x="96" y="520" width="140" height="36" rx="18" fill="#E8621A" opacity="0.15"/>
+  <text x="166" y="543" text-anchor="middle"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="500" font-size="14" fill="#E8621A">WordPress</text>
+
+  <!-- WooCommerce -->
+  <rect x="248" y="520" width="156" height="36" rx="18" fill="#E8621A" opacity="0.15"/>
+  <text x="326" y="543" text-anchor="middle"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="500" font-size="14" fill="#E8621A">WooCommerce</text>
+
+  <!-- GPL v2 -->
+  <rect x="416" y="520" width="110" height="36" rx="18" fill="#E8621A" opacity="0.15"/>
+  <text x="471" y="543" text-anchor="middle"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="500" font-size="14" fill="#E8621A">GPL v2+</text>
+
+  <!-- v1.0.0 -->
+  <rect x="538" y="520" width="100" height="36" rx="18" fill="white" opacity="0.06"/>
+  <text x="588" y="543" text-anchor="middle"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="500" font-size="14" fill="white" opacity="0.5">v1.0.0</text>
+
+  <!-- Domain bottom-right -->
+  <text x="1184" y="596" text-anchor="end"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="400" font-size="18" fill="white" opacity="0.3">squirrels.ninja</text>
+</svg>

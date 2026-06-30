@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" role="img" aria-label="Squirrels">
+  <!-- Monochrome black: use case — single-ink print, dark embossing -->
+  <!-- Icon: all black, no bg square (use surrounding context as bg) -->
+  <g transform="translate(2, 2) scale(0.56)">
+    <!-- Tail -->
+    <path d="M 44 70 C 66 70 78 56 78 42 C 78 26 64 14 50 16"
+          fill="none" stroke="#1A1714" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="50" cy="16" r="11" fill="#1A1714"/>
+    <ellipse cx="28" cy="64" rx="13" ry="12" fill="#1A1714"/>
+    <circle cx="28" cy="42" r="14" fill="#1A1714"/>
+    <polygon points="17,34 19,15 28,32" fill="#1A1714"/>
+    <polygon points="28,31 37,14 39,33" fill="#1A1714"/>
+    <!-- Eye cutout (white in print context — render as knockout) -->
+    <circle cx="35" cy="39" r="3.5" fill="white"/>
+  </g>
+  <text x="68" y="39"
+        font-family="Geist, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-weight="600"
+        font-size="30"
+        letter-spacing="-0.5"
+        fill="#1A1714">squirrels</text>
+</svg>

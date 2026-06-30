@@ -1,0 +1,23 @@
+{
+    "name": "Minimal Blog",
+    "version": "1.0.0",
+    "pages": [
+        {
+            "title": "Home",
+            "slug": "home-blog",
+            "front_page": true,
+            "content": "<!-- wp:heading {\"textAlign\":\"center\",\"level\":1} -->\n<h1 class=\"wp-block-heading has-text-align-center\">Stories Worth Reading</h1>\n<!-- /wp:heading -->\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\">Thoughtful articles on design, business, and culture.</p>\n<!-- /wp:paragraph -->"
+        },
+        {
+            "title": "About",
+            "slug": "about-blog",
+            "content": "<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">About This Blog</h2>\n<!-- /wp:heading -->\n<!-- wp:paragraph -->\n<p>A minimal space for clear writing and considered ideas.</p>\n<!-- /wp:paragraph -->"
+        }
+    ],
+    "theme_mods": {
+        "squirrels_primary_color": "#222222",
+        "squirrels_accent_color": "#c0392b",
+        "squirrels_sidebar_position": "right",
+        "squirrels_body_font_size": "17"
+    }
+}

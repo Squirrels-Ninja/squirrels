@@ -1,0 +1,45 @@
+/* Squirrels — Demo Import Admin Styles */
+
+.squirrels-acorn-wrap { max-width: 960px; }
+.squirrels-acorn-wrap h1 { margin-bottom: .5rem; }
+.squirrels-acorn-wrap .description { margin-bottom: 2rem; color: #666; }
+
+.squirrels-demo-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax( 280px, 1fr ) );
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.squirrels-demo-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.07);
+    transition: box-shadow .2s;
+}
+.squirrels-demo-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+
+.squirrels-demo-card-body { padding: 1.25rem 1.25rem .75rem; flex: 1; }
+.squirrels-demo-card-body h2 { margin: 0 0 .5rem; font-size: 1rem; }
+.squirrels-demo-card-body p { margin: 0; color: #555; font-size: .875rem; line-height: 1.5; }
+
+.squirrels-demo-card-footer {
+    padding: .75rem 1.25rem 1.25rem;
+    border-top: 1px solid #f0f0f0;
+}
+.squirrels-import-btn { width: 100%; justify-content: center; }
+.squirrels-import-btn.is-importing { opacity: .7; cursor: wait; pointer-events: none; }
+
+.squirrels-import-notice {
+    margin-top: .75rem;
+    font-size: .8rem;
+    padding: .4rem .6rem;
+    border-radius: 4px;
+    display: none;
+}
+.squirrels-import-notice.success { background: #edfaed; color: #2d6a2d; display: block; }
+.squirrels-import-notice.error   { background: #fce8e8; color: #8c1c1c; display: block; }

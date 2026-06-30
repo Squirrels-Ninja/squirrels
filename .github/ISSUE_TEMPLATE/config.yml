@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support Policy
+    url: https://github.com/[your-username]/squirrels/blob/main/SUPPORT-POLICY.md
+    about: Read the support policy before opening an issue
+  - name: Security Vulnerability
+    url: https://github.com/[your-username]/squirrels/blob/main/SECURITY.md
+    about: Report security vulnerabilities privately — do not open a public issue
+  - name: Documentation
+    url: https://github.com/[your-username]/squirrels/blob/main/README.md
+    about: Read the documentation first — your question may already be answered
