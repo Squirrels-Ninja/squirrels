@@ -148,6 +148,7 @@ add_action( 'customize_register', function () {
 require_once SQUIRRELS_DIR . '/inc/template-tags.php';
 require_once SQUIRRELS_DIR . '/inc/extras.php';
 require_once SQUIRRELS_DIR . '/inc/woocommerce.php';
+require_once SQUIRRELS_DIR . '/inc/block-patterns.php';
 
 if ( is_admin() ) {
     require_once SQUIRRELS_DIR . '/inc/demo-import/demo-import.php';

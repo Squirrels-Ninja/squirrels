@@ -272,3 +272,185 @@ body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; mar
     .squirrels-container { flex-direction: column !important; }
     .squirrels-footer-widgets { flex-direction: column; }
 }
+
+/* =============================================================================
+   T8 — Block Pattern Library
+   ============================================================================= */
+
+/* Shared padding for all patterns */
+.squirrels-pattern {
+    padding: var(--squirrels-space-2xl, 4rem) var(--squirrels-space-md, 1rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Hero Centered
+   --------------------------------------------------------------------------- */
+.squirrels-hero-centered {
+    background: var(--squirrels-color-surface, #fffaf4);
+    text-align: center;
+}
+.squirrels-hero-centered h1 {
+    max-width: 760px;
+    margin-inline: auto;
+}
+.squirrels-hero-centered p {
+    max-width: 620px;
+    margin-inline: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   Hero Store
+   --------------------------------------------------------------------------- */
+.squirrels-hero-store {
+    background: var(--squirrels-color-surface, #fffaf4);
+}
+.squirrels-hero-store__inner {
+    gap: 3rem;
+}
+.squirrels-hero-store__copy {
+    flex: 1;
+}
+.squirrels-hero-store__eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--squirrels-primary, #C94F10);
+    margin-bottom: 0.5rem;
+}
+.squirrels-hero-store__badge {
+    flex-shrink: 0;
+}
+.squirrels-hero-store__sale-badge {
+    display: inline-block;
+    background: var(--squirrels-primary, #C94F10);
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 1.25rem 1.5rem;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------------------
+   Three Feature Cards
+   --------------------------------------------------------------------------- */
+.squirrels-features-three {
+    background: #fff;
+}
+.squirrels-features-three h2 {
+    margin-bottom: 0.5rem;
+}
+.squirrels-features-three > .wp-block-group > p {
+    margin-bottom: 2.5rem;
+}
+.squirrels-feature-card {
+    background: var(--squirrels-color-surface, #fffaf4);
+    border: 1px solid var(--squirrels-border, #e8e1d9);
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+.squirrels-feature-card__icon {
+    margin-bottom: 0.75rem;
+}
+
+/* ---------------------------------------------------------------------------
+   CTA Banner
+   --------------------------------------------------------------------------- */
+.squirrels-cta-banner {
+    background: var(--squirrels-primary, #C94F10);
+    color: #fff;
+    text-align: center;
+}
+.squirrels-cta-banner h2,
+.squirrels-cta-banner p {
+    color: #fff;
+    max-width: 640px;
+    margin-inline: auto;
+}
+.squirrels-cta-banner .wp-block-button__link {
+    border-color: #fff !important;
+    color: #fff !important;
+}
+.squirrels-cta-banner .wp-block-button__link:hover {
+    background: #fff !important;
+    color: var(--squirrels-primary, #C94F10) !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Testimonials
+   --------------------------------------------------------------------------- */
+.squirrels-testimonials {
+    background: var(--squirrels-color-surface, #fffaf4);
+}
+.squirrels-testimonials h2 {
+    margin-bottom: 2rem;
+}
+.squirrels-testimonial {
+    background: #fff;
+    border: 1px solid var(--squirrels-border, #e8e1d9);
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.squirrels-testimonial__quote {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--squirrels-text, #1A1714);
+    margin: 0;
+}
+.squirrels-testimonial__quote::before {
+    content: "\201C";
+}
+.squirrels-testimonial__quote::after {
+    content: "\201D";
+}
+.squirrels-testimonial__author {
+    margin-top: auto;
+}
+.squirrels-testimonial__name {
+    margin: 0;
+    font-size: 0.9375rem;
+}
+.squirrels-testimonial__role {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--squirrels-text-muted, #6b6560);
+}
+
+/* ---------------------------------------------------------------------------
+   Product Grid
+   --------------------------------------------------------------------------- */
+.squirrels-product-grid {
+    background: #fff;
+}
+.squirrels-product-grid__header {
+    margin-bottom: 1.5rem;
+}
+.squirrels-product-grid__header h2 {
+    margin: 0;
+}
+.squirrels-product-grid__header a {
+    color: var(--squirrels-primary, #C94F10);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------------
+   Pattern responsive overrides
+   --------------------------------------------------------------------------- */
+@media ( max-width: 768px ) {
+    .squirrels-hero-store__inner { flex-direction: column; }
+    .squirrels-hero-store__badge { display: none; }
+    .squirrels-features-three__grid { flex-direction: column; }
+    .squirrels-testimonials__grid { flex-direction: column; }
+}
