@@ -4,7 +4,7 @@
  * Slug: squirrels/newsletter-signup
  * Categories: squirrels
  * Keywords: newsletter, email, signup, subscribe, list, mailing
- * Description: Centered email signup section with heading, subtext, and an inline form. Replace the form action with your email platform shortcode or embed.
+ * Description: Centered email signup section with heading, subtext, and an accessible inline form. Connect the form action to your email platform (Mailchimp, MailPoet, Klaviyo, etc.).
  */
 ?>
 

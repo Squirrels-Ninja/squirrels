@@ -3,7 +3,7 @@
  * Title: CTA Banner
  * Slug: squirrels/cta-banner
  * Categories: squirrels
- * Keywords: cta, call to action, banner, conversion, signup
+ * Keywords: cta, call to action, banner, conversion, button
  * Description: Full-width orange call-to-action banner with heading and button.
  */
 ?>

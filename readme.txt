@@ -3,7 +3,7 @@ Contributors: (your-wordpress-org-username)
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, blog, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, one-column, right-sidebar, two-columns, translation-ready, wide-blocks, threaded-comments
@@ -22,6 +22,7 @@ Squirrels is a clean, fast WordPress + WooCommerce theme built for modern online
 * One-click Demo Import — three starter site packs: Classic Store, Minimal Blog, Creative Portfolio
 * Responsive layout — CSS Flexbox and Grid, mobile hamburger menu, adaptive sidebar and footer columns
 * Block editor ready — wide and full alignment, wp-block-styles compatibility, responsive embeds
+* Native block pattern library — 12 reusable, fully editable page sections; no page builder required
 * Accessibility — skip link, ARIA labels, screen-reader text throughout
 * 2 navigation menus: Primary, Footer
 * 4 widget areas: Main Sidebar, Footer 1, Footer 2, Footer 3
@@ -33,6 +34,37 @@ Squirrels is a clean, fast WordPress + WooCommerce theme built for modern online
 **WooCommerce Compatibility**
 
 Squirrels declares `add_theme_support( 'woocommerce' )` and registers product gallery zoom, lightbox, and slider support. It declares High-Performance Order Storage (HPOS) compatibility for WooCommerce 7.1+. No WooCommerce core template files are overridden, which means WooCommerce template updates do not break the theme.
+
+**Pattern Library**
+
+Squirrels includes 12 native Gutenberg block patterns — pre-built page sections that insert as fully editable content directly in the block editor. No page builder required.
+
+Patterns are organised into two categories:
+
+*Squirrels* — General-purpose sections usable on any page:
+
+* Hero Centered — full-width centered hero with heading, subtext, and CTA button
+* Hero Store — split hero with eyebrow text, two call-to-action buttons, and a sale badge
+* Three Feature Cards — three-column icon + heading + description grid
+* CTA Banner — full-width orange call-to-action banner with heading and button
+* Testimonials — two-column customer quote layout with name and role
+* Trust Badges — four-column trust signal row: secure checkout, free shipping, easy returns, support
+* Newsletter Signup — accessible inline email signup form with privacy note
+
+*Squirrels WooCommerce* — Live commerce sections (hidden when WooCommerce is not active):
+
+* Hero Store — also appears in this category
+* Featured Categories — three-column category showcase with image and browse link
+* Sale Banner — high-contrast horizontal sale announcement with discount text and CTA
+* Best Sellers — three products ordered by popularity (live WooCommerce query)
+* New Arrivals — four newest products ordered by date (live WooCommerce query)
+* Product Grid — three featured products with a link to the full shop
+
+WooCommerce patterns use the `Requires Plugins: woocommerce` header and are suppressed automatically in the inserter when WooCommerce is not active. The theme produces no errors without WooCommerce.
+
+The Newsletter Signup pattern ships with a placeholder form action. Connect it to your preferred email platform: Mailchimp, MailPoet, Klaviyo, FluentCRM, or ConvertKit.
+
+All patterns are responsive and use the Squirrels design token system for consistent spacing, colors, and typography. WCAG AA color contrast is maintained throughout.
 
 **Starter Sites**
 
@@ -77,7 +109,11 @@ Squirrels detects WooCommerce automatically and applies shop styling.
 
 = Does this theme require a page builder? =
 
-No. Squirrels works with the native WordPress block editor. Starter site demos import as real block content with no page builder dependency.
+No. Squirrels works with the native WordPress block editor. It ships with 12 block patterns — pre-built page sections you can insert and customise from the Patterns panel. Starter site demos import as real block content with no page builder dependency.
+
+= What are block patterns and where do I find them? =
+
+Block patterns are pre-built arrangements of blocks that insert as fully editable content. In the block editor, click **+** → **Patterns** → **Squirrels** or **Squirrels WooCommerce**. Click any pattern to preview it, then insert it into your page.
 
 = Do I need WooCommerce to use this theme? =
 
@@ -122,6 +158,12 @@ Yes. All translatable strings use the `squirrels` text domain and are wrapped in
 
 == Changelog ==
 
+= 1.1.0 — 2026-07-01 =
+* Added block pattern library: 12 native Gutenberg patterns across two categories (Squirrels, Squirrels WooCommerce).
+* WooCommerce patterns suppressed automatically when WooCommerce is inactive via Requires Plugins header.
+* Updated documentation: README.md, readme.txt, Treehouse pattern reference.
+* Editor polish: pattern titles, descriptions, and keywords reviewed and corrected.
+
 = 1.0.0 — 2026-06-29 =
 * Initial release.
 * Full WordPress template hierarchy.
@@ -133,6 +175,9 @@ Yes. All translatable strings use the `squirrels` text domain and are wrapped in
 * Child theme packaged separately.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Adds the block pattern library. No breaking changes. Safe to update.
 
 = 1.0.0 =
 Initial release. No upgrade path from a previous version.
