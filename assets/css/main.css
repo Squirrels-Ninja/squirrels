@@ -446,6 +446,179 @@ body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; mar
 }
 
 /* ---------------------------------------------------------------------------
+   Featured Categories
+   --------------------------------------------------------------------------- */
+.squirrels-featured-categories {
+    background: #fff;
+}
+.squirrels-featured-categories h2 {
+    margin-bottom: 2rem;
+}
+.squirrels-category-card {
+    text-align: center;
+}
+.squirrels-category-card__image {
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.squirrels-category-card__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.squirrels-category-card h3 {
+    margin-bottom: 0.25rem;
+}
+.squirrels-category-card__count {
+    font-size: 0.875rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Sale Banner
+   --------------------------------------------------------------------------- */
+.squirrels-sale-banner {
+    background: var(--squirrels-accent, #B91C1C);
+    color: #fff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.squirrels-sale-banner__inner {
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.squirrels-sale-banner__label {
+    background: #fff;
+    color: var(--squirrels-accent, #B91C1C);
+    font-weight: 800;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin: 0;
+    align-self: center;
+}
+.squirrels-sale-banner__heading {
+    color: #fff;
+    font-size: 1.25rem;
+    margin: 0;
+}
+.squirrels-sale-banner__sub {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0;
+}
+.squirrels-sale-banner .wp-block-button__link {
+    border-color: #fff !important;
+    color: #fff !important;
+}
+.squirrels-sale-banner .wp-block-button__link:hover {
+    background: #fff !important;
+    color: var(--squirrels-accent, #B91C1C) !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Best Sellers & New Arrivals (share product-grid header styles)
+   --------------------------------------------------------------------------- */
+.squirrels-best-sellers,
+.squirrels-new-arrivals {
+    background: var(--squirrels-color-surface, #fffaf4);
+}
+
+/* ---------------------------------------------------------------------------
+   Trust Badges
+   --------------------------------------------------------------------------- */
+.squirrels-trust-badges {
+    background: #fff;
+    border-top: 1px solid var(--squirrels-border, #e8e1d9);
+    border-bottom: 1px solid var(--squirrels-border, #e8e1d9);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+.squirrels-trust-badge {
+    text-align: center;
+}
+.squirrels-trust-badge__icon {
+    margin-bottom: 0.5rem;
+}
+.squirrels-trust-badge h4 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
+}
+.squirrels-trust-badge__sub {
+    font-size: 0.8125rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Newsletter Signup
+   --------------------------------------------------------------------------- */
+.squirrels-newsletter {
+    background: var(--squirrels-color-surface, #fffaf4);
+    text-align: center;
+}
+.squirrels-newsletter h2,
+.squirrels-newsletter p {
+    max-width: 560px;
+    margin-inline: auto;
+}
+.squirrels-newsletter__form {
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+}
+.squirrels-newsletter__label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+.squirrels-newsletter__row {
+    display: flex;
+    gap: 0.5rem;
+}
+.squirrels-newsletter__input {
+    flex: 1;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--squirrels-border, #e8e1d9);
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    background: #fff;
+    color: var(--squirrels-text, #1A1714);
+    transition: border-color 0.15s;
+}
+.squirrels-newsletter__input:focus {
+    outline: none;
+    border-color: var(--squirrels-primary, #C94F10);
+    box-shadow: 0 0 0 3px rgba(201,79,16,0.15);
+}
+.squirrels-newsletter__submit {
+    padding: 0.625rem 1.25rem;
+    background: var(--squirrels-primary, #C94F10);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+.squirrels-newsletter__submit:hover {
+    opacity: 0.87;
+}
+.squirrels-newsletter__privacy {
+    font-size: 0.75rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------------------
    Pattern responsive overrides
    --------------------------------------------------------------------------- */
 @media ( max-width: 768px ) {
@@ -453,4 +626,9 @@ body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; mar
     .squirrels-hero-store__badge { display: none; }
     .squirrels-features-three__grid { flex-direction: column; }
     .squirrels-testimonials__grid { flex-direction: column; }
+    .squirrels-featured-categories__grid { flex-direction: column; }
+    .squirrels-sale-banner__inner { flex-direction: column; align-items: flex-start; }
+    .squirrels-trust-badges__grid { flex-direction: column; gap: 1.5rem; }
+    .squirrels-newsletter__row { flex-direction: column; }
+    .squirrels-newsletter__submit { width: 100%; }
 }
