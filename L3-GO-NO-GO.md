@@ -10,7 +10,7 @@ L3 is complete only when every item below is checked. Do not capture production 
 
 ## Infrastructure
 
-- [ ] Cloudways server provisioned (DigitalOcean, 1 GB RAM)
+- [ ] WPMU DEV Managed Hosting server provisioned (see `HOSTING.md`)
 - [ ] PHP 8.3 (or latest stable supported by WordPress + WooCommerce)
 - [ ] WordPress installed
 - [ ] WooCommerce installed

@@ -21,11 +21,13 @@ This runbook covers all 8 phases of L3, from server provisioning to production s
 
 ### Infrastructure decision
 
+The official Squirrels demo and QA environment runs on **WPMU DEV Managed Hosting**. See `HOSTING.md` for the full hosting recommendation and requirements.
+
 | Option | Recommended for | Notes |
 |--------|----------------|-------|
-| Managed WordPress (Kinsta, WP Engine, Cloudways) | Fastest path | HTTPS built-in, daily backups, object cache included |
+| WPMU DEV Managed Hosting | Official demo + QA environment | SSH, WP-CLI, staging, daily backups, object cache |
+| Managed WordPress (Kinsta, WP Engine, Cloudways) | Alternative managed path | HTTPS built-in, daily backups, object cache included |
 | VPS (DigitalOcean, Hetzner, Vultr) | Most control, cheapest | Requires Nginx/Apache + PHP + MySQL setup |
-| Local by Flywheel → push to Kinsta | Best local dev workflow | Push live when ready |
 
 **Minimum spec:**
 - PHP 8.2+ (8.3 preferred)
