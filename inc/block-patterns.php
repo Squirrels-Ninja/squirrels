@@ -3,6 +3,13 @@ defined( 'ABSPATH' ) || exit;
 
 function squirrels_register_block_pattern_categories() {
 	register_block_pattern_category(
+		'squirrels-components',
+		array(
+			'label' => __( 'Squirrels Components', 'squirrels' ),
+		)
+	);
+
+	register_block_pattern_category(
 		'squirrels',
 		array(
 			'label' => __( 'Squirrels', 'squirrels' ),

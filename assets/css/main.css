@@ -274,6 +274,322 @@ body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; mar
 }
 
 /* =============================================================================
+   T9 — Component Block Styles
+   Registered via inc/block-styles.php. Class format: is-style-{name}
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   Group: Card
+   --------------------------------------------------------------------------- */
+.wp-block-group.is-style-squirrels-card {
+    background: #fff;
+    border: 1px solid var(--squirrels-border, #e8e1d9);
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+    padding: 1.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* ---------------------------------------------------------------------------
+   Group: Feature Box
+   --------------------------------------------------------------------------- */
+.wp-block-group.is-style-squirrels-feature-box {
+    background: var(--squirrels-color-surface, #fffaf4);
+    border-left: 4px solid var(--squirrels-primary, #C94F10);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 var(--squirrels-radius-md, 0.5rem) var(--squirrels-radius-md, 0.5rem) 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Group: Alert variants
+   --------------------------------------------------------------------------- */
+.wp-block-group[class*="is-style-squirrels-alert"] {
+    padding: 1rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+.wp-block-group.is-style-squirrels-alert-info {
+    background: #EFF6FF;
+    border-left-color: #3B82F6;
+    color: #1E40AF;
+}
+.wp-block-group.is-style-squirrels-alert-success {
+    background: #F0FDF4;
+    border-left-color: #22C55E;
+    color: #166534;
+}
+.wp-block-group.is-style-squirrels-alert-warning {
+    background: #FFFBEB;
+    border-left-color: #F59E0B;
+    color: #92400E;
+}
+.wp-block-group.is-style-squirrels-alert-error {
+    background: #FEF2F2;
+    border-left-color: var(--squirrels-accent, #B91C1C);
+    color: #991B1B;
+}
+.wp-block-group[class*="is-style-squirrels-alert"] p { margin: 0; }
+.wp-block-group[class*="is-style-squirrels-alert"] p + p { margin-top: 0.5rem; }
+
+/* ---------------------------------------------------------------------------
+   Button: Ghost
+   --------------------------------------------------------------------------- */
+.wp-block-button.is-style-squirrels-ghost .wp-block-button__link {
+    background: transparent !important;
+    color: var(--squirrels-primary, #C94F10) !important;
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.wp-block-button.is-style-squirrels-ghost .wp-block-button__link:hover {
+    opacity: 0.75;
+}
+
+/* ---------------------------------------------------------------------------
+   Button: Danger
+   --------------------------------------------------------------------------- */
+.wp-block-button.is-style-squirrels-danger .wp-block-button__link {
+    background: var(--squirrels-accent, #B91C1C) !important;
+    color: #fff !important;
+    border-color: var(--squirrels-accent, #B91C1C) !important;
+}
+.wp-block-button.is-style-squirrels-danger .wp-block-button__link:hover {
+    opacity: 0.87;
+}
+
+/* ---------------------------------------------------------------------------
+   Quote: Testimonial Card
+   --------------------------------------------------------------------------- */
+.wp-block-quote.is-style-squirrels-testimonial {
+    border: 1px solid var(--squirrels-border, #e8e1d9);
+    border-left: none;
+    background: #fff;
+    padding: 1.5rem 1.75rem;
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    font-style: italic;
+}
+.wp-block-quote.is-style-squirrels-testimonial cite {
+    font-style: normal;
+    font-size: 0.875rem;
+    color: var(--squirrels-text-muted, #6b6560);
+}
+
+/* ---------------------------------------------------------------------------
+   Image: Rounded
+   --------------------------------------------------------------------------- */
+.wp-block-image.is-style-squirrels-rounded img {
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Image: Avatar
+   --------------------------------------------------------------------------- */
+.wp-block-image.is-style-squirrels-avatar img {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------------------------------
+   Separator: Narrow
+   --------------------------------------------------------------------------- */
+.wp-block-separator.is-style-squirrels-narrow {
+    width: 60px;
+    margin-inline: 0;
+    border-color: var(--squirrels-border, #e8e1d9);
+}
+
+/* ---------------------------------------------------------------------------
+   Separator: Accent
+   --------------------------------------------------------------------------- */
+.wp-block-separator.is-style-squirrels-accent {
+    width: 48px;
+    border-color: var(--squirrels-primary, #C94F10);
+    border-top-width: 3px;
+    margin-inline: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   List: Icon List
+   --------------------------------------------------------------------------- */
+.wp-block-list.is-style-squirrels-icon-list {
+    list-style: none;
+    padding-left: 0;
+}
+.wp-block-list.is-style-squirrels-icon-list li {
+    padding: 0.3rem 0 0.3rem 1.75rem;
+    position: relative;
+}
+.wp-block-list.is-style-squirrels-icon-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--squirrels-primary, #C94F10);
+    font-weight: 700;
+}
+
+/* =============================================================================
+   T9 — Component Patterns
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   Section Header
+   --------------------------------------------------------------------------- */
+.squirrels-section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.squirrels-section-header__eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--squirrels-primary, #C94F10);
+    margin-bottom: 0.5rem;
+}
+.squirrels-section-header h2 {
+    margin-bottom: 0.75rem;
+}
+.squirrels-section-header__sub {
+    color: var(--squirrels-text-muted, #6b6560);
+    font-size: 1.0625rem;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Statistics Row
+   --------------------------------------------------------------------------- */
+.squirrels-stats-row {
+    padding: 2.5rem 1rem;
+}
+.squirrels-stats-row__grid {
+    gap: 1rem;
+}
+.squirrels-stat {
+    text-align: center;
+}
+.squirrels-stat__number {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--squirrels-primary, #C94F10);
+    line-height: 1;
+    margin-bottom: 0.375rem;
+    letter-spacing: -0.03em;
+}
+.squirrels-stat__label {
+    font-size: 0.9375rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Pricing Card
+   --------------------------------------------------------------------------- */
+.squirrels-pricing-card {
+    height: 100%;
+}
+.squirrels-pricing-card__badge {
+    display: inline-block;
+    background: var(--squirrels-primary, #C94F10);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    margin: 0 0 0.75rem;
+}
+.squirrels-pricing-card__name {
+    font-size: 1.125rem;
+    margin: 0 0 0.75rem;
+}
+.squirrels-pricing-card__price {
+    align-items: baseline;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+.squirrels-pricing-card__amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+.squirrels-pricing-card__period {
+    color: var(--squirrels-text-muted, #6b6560);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+.squirrels-pricing-card__desc {
+    color: var(--squirrels-text-muted, #6b6560);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+.squirrels-pricing-card__features {
+    margin-top: 0.25rem;
+}
+.squirrels-pricing-card .wp-block-buttons {
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Team Card
+   --------------------------------------------------------------------------- */
+.squirrels-team-card {
+    text-align: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.squirrels-team-card__avatar {
+    margin-bottom: 0.5rem;
+}
+.squirrels-team-card__name {
+    font-size: 1.0625rem;
+    margin: 0;
+}
+.squirrels-team-card__role {
+    font-size: 0.875rem;
+    color: var(--squirrels-primary, #C94F10);
+    font-weight: 500;
+    margin: 0;
+}
+.squirrels-team-card__bio {
+    font-size: 0.9375rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Icon List (component pattern layout)
+   --------------------------------------------------------------------------- */
+.squirrels-icon-list {
+    gap: 1.5rem;
+}
+.squirrels-icon-list__item {
+    gap: 1rem;
+    align-items: flex-start;
+}
+.squirrels-icon-list__icon {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+    margin: 0;
+}
+.squirrels-icon-list__label {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+}
+.squirrels-icon-list__text {
+    font-size: 0.9375rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* =============================================================================
    T8 — Block Pattern Library
    ============================================================================= */
 
