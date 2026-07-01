@@ -9,6 +9,24 @@ See `SCAMPER.md` for the performance philosophy and artifact definitions.
 
 ---
 
+## Recommended execution order
+
+Run sub-milestones in this sequence to maximize early wins and minimize regression risk:
+
+| Step | Milestone | Rationale |
+|------|-----------|-----------|
+| 1 | **T7.1** — Baseline | Must happen first, before any changes |
+| 2 | **T7.2** — Asset Audit | Understand what exists before cutting anything |
+| 3 | **T7.2.5** — Asset Inventory | Permanent reference table: every asset, every page, every decision |
+| 4 | **T7.4** — Remove jQuery | Highest-impact, lowest-risk change; easy to verify |
+| 5 | **T7.7** — Font strategy | Architectural decision that affects size, privacy, and CSS token structure |
+| 6 | **T7.3** — CSS + token consolidation | Consolidate tokens after font decision is made; avoids doing it twice |
+| 7 | **T7.5** — WooCommerce conditionals | `squirrels_is_woocommerce_page()` helper cleans up the rest naturally |
+| 8 | **T7.6** — Image optimization | Lower coupling; can run in parallel with T7.5 |
+| 9 | **T7.8** — Final benchmark | Record after all changes; publish Scamper Report |
+
+---
+
 ## Pre-requisites
 
 - [ ] L3 complete — `https://demo.squirrels.ninja` publicly accessible
@@ -103,6 +121,53 @@ Run in Chrome DevTools → Network tab, slow 3G throttling:
 - [ ] Run `wp --info` on server to confirm OPcache is enabled
 
 Fill in the Asset Audit section of `scamper-report-v1.1.0.md`.
+
+---
+
+## T7.2.5 — Asset Inventory
+
+**Goal:** Produce a permanent, per-asset reference table that answers for every CSS and JS file: what it is, where it loads, why it's there, and what should happen to it. This table is added to the Scamper Report and updated with each major release.
+
+### How to build the inventory
+
+1. Open the demo site in Chrome with the Network panel open (DevTools → Network → filter CSS / JS)
+2. Load each page type (homepage, shop, product, cart, blog) and note which assets appear
+3. For each asset, record the columns below
+
+### Inventory table format
+
+| Asset | Raw size | Gzip size | Loads on | Conditional? | Deferrable? | Action |
+|-------|----------|-----------|----------|--------------|-------------|--------|
+| `main.css` | | | All pages | No | No (render-critical) | Keep; consolidate tokens into it |
+| `brand-tokens.css` | 13.8KB | | **Nowhere** | No | — | Merge into `main.css` or inline `:root` block |
+| `style.css` (root) | ~0.5KB | | All pages | No | No | Keep (WP required) |
+| `main.js` | 406B | | All pages | No | Yes (already footer) | Remove jQuery dep; keep vanilla version |
+| `jquery.js` (WP core) | ~87KB | ~30KB | All pages (via theme) | No | No | Remove theme dep; WC still loads it on shop pages |
+| `demo-import.css` | 1.5KB | | Admin only | Yes (`is_admin`) | — | Already conditional; keep |
+| `demo-import.js` | 1.6KB | | Admin only | Yes (`is_admin`) | — | Already conditional; keep |
+| WooCommerce CSS | (measure) | | Shop/product/cart/checkout | Partial | — | Add `squirrels_is_woocommerce_page()` conditional |
+| `wc-cart-fragments.js` | (measure) | | All pages | No | — | Gate with `is_cart() \|\| is_checkout()` if no header cart count |
+
+### Inventory checklist
+
+- [ ] Network panel recorded for homepage (desktop, no cache)
+- [ ] Network panel recorded for `/shop/`
+- [ ] Network panel recorded for a product page
+- [ ] Network panel recorded for `/cart/`
+- [ ] Network panel recorded for `/blog/`
+- [ ] All assets identified, sized (raw + gzip), and assigned an action
+- [ ] Table filled in `scamper-report-v1.1.0.md → Asset Inventory` section
+
+### Decision: brand tokens consolidation
+
+The brand-tokens.css situation requires a one-time architectural decision before T7.3 begins. There are two valid paths — choose one and do not maintain both:
+
+| Path | Description | Pros | Cons |
+|------|-------------|------|------|
+| **A — Inline `:root` block** | Extract only the `:root {}` CSS vars and echo them via `wp_head` at priority 1 | Zero extra HTTP request; tokens available before any CSS parses | Removes tokens from browser DevTools stylesheet view |
+| **B — Merge into `main.css`** | Copy the `:root` block into `main.css` at the top; delete `brand-tokens.css` | Single stylesheet; simple; DevTools shows tokens clearly | Increases `main.css` size (manageable); `brand-tokens.css` becomes dead file |
+
+**Recommendation: Path B.** Merge during T7.3. One source of truth, one file, no `file_get_contents` at runtime. Archive `brand-tokens.css` as a design reference document (rename to `brand-tokens.reference.css`) so the token documentation isn't lost.
 
 ---
 
@@ -338,14 +403,17 @@ If any page fails a threshold: identify the cause, fix it, and re-run. Do not ta
 
 ## T7 Completion Checklist
 
-- [ ] **T7.1** — Baseline captured, Scamper Report started
-- [ ] **T7.2** — Asset audit complete, all findings documented
-- [ ] **T7.3** — CSS: tokens inlined, pattern CSS conditional, dead rules removed
-- [ ] **T7.4** — JS: jQuery removed from theme (vanilla menu toggle), defer confirmed
-- [ ] **T7.5** — WooCommerce: cart fragments audited, pattern block CLS checked
-- [ ] **T7.6** — Images: srcset verified, lazy-load confirmed, SVGs optimized
-- [ ] **T7.7** — Fonts: decision made and implemented (self-host or system stack)
-- [ ] **T7.8** — Final benchmark complete, all thresholds pass
+Run in the recommended execution order:
+
+- [ ] **T7.1** — Baseline captured, Scamper Report started, Scamper Score (baseline) recorded
+- [ ] **T7.2** — Asset audit complete (Network panel, Coverage tab), all findings documented
+- [ ] **T7.2.5** — Asset Inventory table complete; brand-token consolidation path chosen (A or B)
+- [ ] **T7.4** — jQuery removed from theme; vanilla menu toggle verified; `main.js` dependency array empty
+- [ ] **T7.7** — Font strategy decided and implemented; `font-display: swap` confirmed
+- [ ] **T7.3** — CSS: tokens merged/inlined, pattern CSS conditional, dead rules removed, single token source
+- [ ] **T7.5** — `squirrels_is_woocommerce_page()` added; cart fragments gated; WC asset conditionals in place
+- [ ] **T7.6** — Images: `srcset` verified, lazy-load confirmed, SVGs run through `svgo`
+- [ ] **T7.8** — Final benchmark complete; all Scamper thresholds pass; Scamper Report published
 
 **Tag on completion:** `v1.2.0`
 
