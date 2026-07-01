@@ -948,3 +948,213 @@ body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; mar
     .squirrels-newsletter__row { flex-direction: column; }
     .squirrels-newsletter__submit { width: 100%; }
 }
+
+/* ===========================================================================
+   T10.1 — Marketing Page Patterns
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Marketing: Landing Page Hero
+   --------------------------------------------------------------------------- */
+.squirrels-hero-landing {
+    background: var(--squirrels-surface, #FDF5EC);
+    text-align: center;
+}
+
+.squirrels-hero-landing__eyebrow {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--squirrels-primary, #C94F10);
+    margin-bottom: 1rem;
+}
+
+.squirrels-hero-landing__headline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+}
+
+.squirrels-hero-landing__sub {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--squirrels-text-muted, #6b6560);
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.squirrels-hero-landing__proof {
+    font-size: 0.875rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-top: 1.25rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Marketing: Features Grid
+   --------------------------------------------------------------------------- */
+.squirrels-feature-card.is-style-squirrels-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.squirrels-feature-card__icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.squirrels-feature-card__title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.squirrels-feature-card__desc {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+.squirrels-features-grid__row {
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Marketing: Benefits Split
+   --------------------------------------------------------------------------- */
+.squirrels-benefits__image-col .wp-block-image img {
+    border-radius: var(--squirrels-radius-lg, 0.75rem);
+    width: 100%;
+    height: auto;
+}
+
+.squirrels-benefits__eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--squirrels-primary, #C94F10);
+    margin-bottom: 0.75rem;
+}
+
+.squirrels-benefits__heading {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.squirrels-benefits__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-bottom: 1.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Marketing: Statistics Section
+   --------------------------------------------------------------------------- */
+.squirrels-statistics-section {
+    background: var(--squirrels-surface, #FDF5EC);
+}
+
+.squirrels-statistics-section__grid {
+    gap: 1.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Marketing: FAQ Section
+   --------------------------------------------------------------------------- */
+.squirrels-faq__grid {
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.squirrels-faq__item {
+    margin-bottom: 2rem;
+}
+
+.squirrels-faq__item:last-child {
+    margin-bottom: 0;
+}
+
+.squirrels-faq__question {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--squirrels-text, #1A1714);
+}
+
+.squirrels-faq__answer {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Marketing: Contact CTA
+   --------------------------------------------------------------------------- */
+.squirrels-contact-cta {
+    background: var(--squirrels-primary, #C94F10);
+    color: #fff;
+}
+
+.squirrels-contact-cta__heading {
+    color: #fff;
+}
+
+.squirrels-contact-cta__sub {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
+
+.squirrels-contact-cta__trust {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+}
+
+/* Invert button colours inside the orange CTA banner */
+.squirrels-contact-cta .wp-block-button__link {
+    background: #fff;
+    color: var(--squirrels-primary, #C94F10);
+    border-color: #fff;
+}
+
+.squirrels-contact-cta .wp-block-button__link:hover,
+.squirrels-contact-cta .wp-block-button__link:focus {
+    background: var(--squirrels-surface, #FDF5EC);
+    border-color: var(--squirrels-surface, #FDF5EC);
+}
+
+.squirrels-contact-cta .is-style-squirrels-ghost .wp-block-button__link {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.squirrels-contact-cta .is-style-squirrels-ghost .wp-block-button__link:hover,
+.squirrels-contact-cta .is-style-squirrels-ghost .wp-block-button__link:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+/* ---------------------------------------------------------------------------
+   T10.1 Responsive overrides
+   --------------------------------------------------------------------------- */
+@media ( max-width: 768px ) {
+    .squirrels-benefits__grid { flex-direction: column; }
+    .squirrels-features-grid__row { flex-direction: column; }
+    .squirrels-faq__grid { flex-direction: column; }
+    .squirrels-statistics-section__grid { flex-direction: column; gap: 1rem; }
+}
