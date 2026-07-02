@@ -1,0 +1,246 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+
+	"settings": {
+		"appearanceTools": true,
+
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{ "slug": "squirrels-primary",  "color": "#C94F10", "name": "Primary"    },
+				{ "slug": "squirrels-accent",   "color": "#B91C1C", "name": "Accent"     },
+				{ "slug": "squirrels-text",     "color": "#1A1714", "name": "Text"       },
+				{ "slug": "squirrels-muted",    "color": "#6b6560", "name": "Muted"      },
+				{ "slug": "squirrels-bg",       "color": "#FFFFFF", "name": "Background" },
+				{ "slug": "squirrels-surface",  "color": "#FDF5EC", "name": "Surface"    },
+				{ "slug": "squirrels-border",   "color": "#E8E6E2", "name": "Border"     },
+				{ "slug": "squirrels-white",    "color": "#FFFFFF", "name": "White"      },
+				{ "slug": "squirrels-black",    "color": "#1A1714", "name": "Black"      }
+			],
+			"duotone": []
+		},
+
+		"typography": {
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+					"slug": "heading",
+					"name": "Heading (Geist / Inter)"
+				},
+				{
+					"fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+					"slug": "body",
+					"name": "Body (Inter / System)"
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+					"slug": "system",
+					"name": "System UI"
+				},
+				{
+					"fontFamily": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
+					"slug": "mono",
+					"name": "Monospace"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "xs",  "size": "0.75rem",  "name": "XS"    },
+				{ "slug": "sm",  "size": "0.875rem", "name": "Small" },
+				{ "slug": "md",  "size": "1rem",     "name": "Medium" },
+				{ "slug": "lg",  "size": "1.125rem", "name": "Large" },
+				{ "slug": "xl",  "size": "1.25rem",  "name": "XL"    },
+				{ "slug": "2xl", "size": "1.5rem",   "name": "2XL"   },
+				{ "slug": "3xl", "size": "2rem",     "name": "3XL"   },
+				{ "slug": "4xl", "size": "2.5rem",   "name": "4XL"   },
+				{ "slug": "5xl", "size": "3rem",     "name": "5XL"   },
+				{ "slug": "6xl", "size": "clamp(2.5rem, 5vw, 4rem)", "name": "6XL" }
+			]
+		},
+
+		"spacing": {
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
+			"spacingSizes": [
+				{ "slug": "20", "size": "0.5rem",  "name": "2"  },
+				{ "slug": "30", "size": "0.75rem", "name": "3"  },
+				{ "slug": "40", "size": "1rem",    "name": "4"  },
+				{ "slug": "50", "size": "1.5rem",  "name": "5"  },
+				{ "slug": "60", "size": "2rem",    "name": "6"  },
+				{ "slug": "70", "size": "3rem",    "name": "7"  },
+				{ "slug": "80", "size": "4rem",    "name": "8"  },
+				{ "slug": "90", "size": "6rem",    "name": "9"  },
+				{ "slug": "100","size": "8rem",    "name": "10" }
+			],
+			"padding": true,
+			"margin": true,
+			"blockGap": true
+		},
+
+		"layout": {
+			"contentSize": "800px",
+			"wideSize": "1200px"
+		},
+
+		"blocks": {
+			"core/button": {
+				"color": {
+					"palette": [
+						{ "slug": "squirrels-primary", "color": "#C94F10", "name": "Primary" },
+						{ "slug": "squirrels-white",   "color": "#FFFFFF", "name": "White"   }
+					]
+				}
+			}
+		}
+	},
+
+	"styles": {
+		"color": {
+			"background": "#FFFFFF",
+			"text":       "#1A1714"
+		},
+		"typography": {
+			"fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+			"fontSize":   "1rem",
+			"lineHeight": "1.6"
+		},
+		"spacing": {
+			"blockGap": "1.5rem"
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "#C94F10" },
+				":hover": { "color": { "text": "#a03d0c" } }
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "'Geist', 'Inter', -apple-system, sans-serif",
+					"fontSize":   "clamp(2rem, 5vw, 3.5rem)",
+					"fontWeight": "800",
+					"lineHeight": "1.1",
+					"letterSpacing": "-0.03em"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "'Geist', 'Inter', -apple-system, sans-serif",
+					"fontSize":   "clamp(1.5rem, 3vw, 2.25rem)",
+					"fontWeight": "800",
+					"lineHeight": "1.2",
+					"letterSpacing": "-0.02em"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "'Geist', 'Inter', -apple-system, sans-serif",
+					"fontSize":   "clamp(1.25rem, 2.5vw, 1.75rem)",
+					"fontWeight": "700",
+					"lineHeight": "1.3"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "'Geist', 'Inter', -apple-system, sans-serif",
+					"fontSize":   "1.125rem",
+					"fontWeight": "700",
+					"lineHeight": "1.4"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "'Geist', 'Inter', -apple-system, sans-serif",
+					"fontSize":   "1rem",
+					"fontWeight": "700"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "'Geist', 'Inter', -apple-system, sans-serif",
+					"fontSize":   "0.875rem",
+					"fontWeight": "700",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.06em"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "#C94F10",
+					"text": "#FFFFFF"
+				},
+				"typography": {
+					"fontWeight": "600",
+					"fontSize": "0.9375rem"
+				},
+				"spacing": {
+					"padding": {
+						"top":    "0.6875rem",
+						"bottom": "0.6875rem",
+						"left":   "1.375rem",
+						"right":  "1.375rem"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "#a03d0c",
+						"text": "#FFFFFF"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "#a03d0c"
+					}
+				}
+			}
+		},
+		"blocks": {
+			"core/separator": {
+				"color": { "text": "#E8E6E2" },
+				"border": { "color": "#E8E6E2", "width": "1px" }
+			},
+			"core/code": {
+				"color": { "background": "#FDF5EC" },
+				"typography": {
+					"fontFamily": "'JetBrains Mono', monospace",
+					"fontSize": "0.875rem"
+				},
+				"spacing": { "padding": { "top": "1rem", "bottom": "1rem", "left": "1.25rem", "right": "1.25rem" } }
+			},
+			"core/pullquote": {
+				"border": { "color": "#C94F10", "width": "4px" },
+				"typography": {
+					"fontStyle": "italic",
+					"fontWeight": "700"
+				}
+			},
+			"core/quote": {
+				"border": { "color": "#C94F10", "style": "solid", "width": "4px" }
+			}
+		}
+	},
+
+	"templateParts": [
+		{ "name": "header",           "title": "Header",                   "area": "header" },
+		{ "name": "header-centered",  "title": "Header: Centered",         "area": "header" },
+		{ "name": "header-minimal",   "title": "Header: Minimal (No Nav)", "area": "header" },
+		{ "name": "footer",           "title": "Footer",                   "area": "footer" },
+		{ "name": "footer-minimal",   "title": "Footer: Minimal",          "area": "footer" },
+		{ "name": "footer-widgets",   "title": "Footer: Widgets",          "area": "footer" },
+		{ "name": "announcement-bar", "title": "Announcement Bar",         "area": "header" },
+		{ "name": "post-meta",        "title": "Post Meta",                "area": "uncategorized" },
+		{ "name": "post-navigation",  "title": "Post Navigation",          "area": "uncategorized" },
+		{ "name": "breadcrumbs",      "title": "Breadcrumbs",              "area": "uncategorized" },
+		{ "name": "sidebar",          "title": "Sidebar",                  "area": "uncategorized" },
+		{ "name": "product-meta",     "title": "Product Meta",             "area": "uncategorized" },
+		{ "name": "no-results",       "title": "No Results",               "area": "uncategorized" }
+	],
+
+	"customTemplates": [
+		{ "name": "page-wide",        "title": "Page: Full Width",              "postTypes": ["page"] },
+		{ "name": "page-no-title",    "title": "Page: No Title",                "postTypes": ["page"] },
+		{ "name": "page-landing",     "title": "Page: Landing (No Header Nav)", "postTypes": ["page"] },
+		{ "name": "page-maintenance", "title": "Page: Maintenance",             "postTypes": ["page"] },
+		{ "name": "page-coming-soon", "title": "Page: Coming Soon",             "postTypes": ["page"] },
+		{ "name": "single-wide",      "title": "Single Post: Full Width",       "postTypes": ["post"] }
+	]
+}
