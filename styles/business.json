@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Business",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "squirrels-primary",  "color": "#1E3A5F", "name": "Primary (Navy)"     },
+				{ "slug": "squirrels-accent",   "color": "#2563EB", "name": "Accent (Blue)"      },
+				{ "slug": "squirrels-text",     "color": "#0F172A", "name": "Text"               },
+				{ "slug": "squirrels-muted",    "color": "#64748B", "name": "Muted"              },
+				{ "slug": "squirrels-bg",       "color": "#FFFFFF", "name": "Background"         },
+				{ "slug": "squirrels-surface",  "color": "#F1F5F9", "name": "Surface (Slate)"    },
+				{ "slug": "squirrels-border",   "color": "#E2E8F0", "name": "Border"             },
+				{ "slug": "squirrels-white",    "color": "#FFFFFF", "name": "White"              },
+				{ "slug": "squirrels-black",    "color": "#0F172A", "name": "Black"              }
+			]
+		}
+	},
+	"styles": {
+		"color": { "background": "#FFFFFF", "text": "#0F172A" },
+		"typography": {
+			"fontFamily": "'Inter', -apple-system, sans-serif",
+			"fontSize": "1rem"
+		},
+		"elements": {
+			"link": { "color": { "text": "#2563EB" } },
+			"h1": { "typography": { "letterSpacing": "-0.025em", "fontWeight": "700" } },
+			"h2": { "typography": { "letterSpacing": "-0.02em",  "fontWeight": "700" } },
+			"button": {
+				"color": { "background": "#1E3A5F", "text": "#FFFFFF" },
+				":hover": { "color": { "background": "#15294a" } }
+			}
+		}
+	}
+}

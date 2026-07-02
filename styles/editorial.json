@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Editorial",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "squirrels-primary",  "color": "#8B1A1A", "name": "Primary (Burgundy)" },
+				{ "slug": "squirrels-accent",   "color": "#C4932A", "name": "Accent (Gold)"      },
+				{ "slug": "squirrels-text",     "color": "#1C1712", "name": "Text"               },
+				{ "slug": "squirrels-muted",    "color": "#6B6355", "name": "Muted"              },
+				{ "slug": "squirrels-bg",       "color": "#FDFAF5", "name": "Background (Cream)" },
+				{ "slug": "squirrels-surface",  "color": "#F5EFE6", "name": "Surface"            },
+				{ "slug": "squirrels-border",   "color": "#E0D8CC", "name": "Border"             },
+				{ "slug": "squirrels-white",    "color": "#FDFAF5", "name": "Off-White"          },
+				{ "slug": "squirrels-black",    "color": "#1C1712", "name": "Black"              }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Georgia, 'Times New Roman', Times, serif",
+					"slug": "heading",
+					"name": "Heading (Serif)"
+				},
+				{
+					"fontFamily": "'Inter', -apple-system, sans-serif",
+					"slug": "body",
+					"name": "Body (Sans-serif)"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": { "background": "#FDFAF5", "text": "#1C1712" },
+		"typography": {
+			"fontFamily": "'Inter', -apple-system, sans-serif",
+			"fontSize": "1.0625rem",
+			"lineHeight": "1.75"
+		},
+		"elements": {
+			"link": { "color": { "text": "#8B1A1A" } },
+			"h1": {
+				"typography": {
+					"fontFamily": "Georgia, 'Times New Roman', serif",
+					"fontWeight": "700",
+					"fontStyle": "italic",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "Georgia, 'Times New Roman', serif",
+					"fontWeight": "700",
+					"fontStyle": "italic"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "Georgia, 'Times New Roman', serif",
+					"fontWeight": "700"
+				}
+			},
+			"button": {
+				"color": { "background": "#8B1A1A", "text": "#FDFAF5" },
+				":hover": { "color": { "background": "#6d1414" } }
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Dark",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "squirrels-primary",  "color": "#F97316", "name": "Primary (Orange)"   },
+				{ "slug": "squirrels-accent",   "color": "#FB923C", "name": "Accent (Light Orange)" },
+				{ "slug": "squirrels-text",     "color": "#F1F0EE", "name": "Text"               },
+				{ "slug": "squirrels-muted",    "color": "#9CA3AF", "name": "Muted"              },
+				{ "slug": "squirrels-bg",       "color": "#111827", "name": "Background (Dark)"  },
+				{ "slug": "squirrels-surface",  "color": "#1F2937", "name": "Surface"            },
+				{ "slug": "squirrels-border",   "color": "#374151", "name": "Border"             },
+				{ "slug": "squirrels-white",    "color": "#F1F0EE", "name": "Near-White"         },
+				{ "slug": "squirrels-black",    "color": "#111827", "name": "Near-Black"         }
+			]
+		}
+	},
+	"styles": {
+		"color": { "background": "#111827", "text": "#F1F0EE" },
+		"typography": {
+			"fontFamily": "'Inter', -apple-system, sans-serif",
+			"fontSize": "1rem"
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "#F97316" },
+				":hover": { "color": { "text": "#FB923C" } }
+			},
+			"h1": { "color": { "text": "#F1F0EE" } },
+			"h2": { "color": { "text": "#F1F0EE" } },
+			"h3": { "color": { "text": "#F1F0EE" } },
+			"button": {
+				"color": { "background": "#F97316", "text": "#111827" },
+				":hover": { "color": { "background": "#ea6d0c" } }
+			}
+		},
+		"blocks": {
+			"core/separator": {
+				"color": { "text": "#374151" },
+				"border": { "color": "#374151" }
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Store",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "squirrels-primary",  "color": "#C94F10", "name": "Primary"    },
+				{ "slug": "squirrels-accent",   "color": "#B91C1C", "name": "Accent"     },
+				{ "slug": "squirrels-text",     "color": "#1A1714", "name": "Text"       },
+				{ "slug": "squirrels-muted",    "color": "#6b6560", "name": "Muted"      },
+				{ "slug": "squirrels-bg",       "color": "#FFFFFF", "name": "Background" },
+				{ "slug": "squirrels-surface",  "color": "#FDF5EC", "name": "Surface"    },
+				{ "slug": "squirrels-border",   "color": "#E8E6E2", "name": "Border"     },
+				{ "slug": "squirrels-white",    "color": "#FFFFFF", "name": "White"      },
+				{ "slug": "squirrels-black",    "color": "#1A1714", "name": "Black"      }
+			]
+		}
+	},
+	"styles": {
+		"color": { "background": "#FFFFFF", "text": "#1A1714" },
+		"typography": {
+			"fontFamily": "'Inter', -apple-system, sans-serif",
+			"fontSize": "1rem"
+		},
+		"elements": {
+			"link": { "color": { "text": "#C94F10" } },
+			"button": {
+				"color": { "background": "#C94F10", "text": "#FFFFFF" },
+				":hover": { "color": { "background": "#a03d0c" } }
+			}
+		}
+	}
+}
