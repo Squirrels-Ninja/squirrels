@@ -1642,3 +1642,330 @@ body:not(.squirrels-has-sidebar) .squirrels-content-area { max-width: 860px; mar
     .squirrels-locations__grid { flex-direction: column; }
     .squirrels-timeline__entry { flex-direction: column; gap: 0.5rem; }
 }
+
+/* ===========================================================================
+   T10.4 — Blog Page Patterns
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   Blog: Featured Posts
+   --------------------------------------------------------------------------- */
+.squirrels-featured-posts__grid {
+    gap: 1.25rem;
+}
+
+.squirrels-post-card.is-style-squirrels-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.squirrels-post-card__image {
+    margin: 0;
+}
+
+.squirrels-post-card__image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.squirrels-post-card__cat {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--squirrels-primary, #C94F10);
+    padding: 1rem 1.25rem 0;
+    margin: 0;
+}
+
+.squirrels-post-card__title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.35;
+    padding: 0.5rem 1.25rem 0;
+    margin: 0;
+}
+
+.squirrels-post-card__title a {
+    color: var(--squirrels-text, #1A1714);
+    text-decoration: none;
+}
+
+.squirrels-post-card__title a:hover {
+    color: var(--squirrels-primary, #C94F10);
+}
+
+.squirrels-post-card__excerpt {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--squirrels-text-muted, #6b6560);
+    padding: 0.5rem 1.25rem 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.squirrels-post-card__meta {
+    font-size: 0.75rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    padding: 0.75rem 1.25rem 1.25rem;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Blog: Author Bio
+   --------------------------------------------------------------------------- */
+.squirrels-author-bio__inner {
+    gap: 1.5rem;
+}
+
+.squirrels-author-bio__avatar {
+    flex-shrink: 0;
+}
+
+.squirrels-author-bio__written-by {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0 0 0.25rem;
+}
+
+.squirrels-author-bio__name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.125rem;
+}
+
+.squirrels-author-bio__role {
+    font-size: 0.875rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-bottom: 0.75rem;
+}
+
+.squirrels-author-bio__bio {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-bottom: 0.75rem;
+}
+
+.squirrels-author-bio__social {
+    gap: 1rem;
+}
+
+.squirrels-author-bio__social-link {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.squirrels-author-bio__social-link a {
+    color: var(--squirrels-primary, #C94F10);
+    text-decoration: none;
+}
+
+.squirrels-author-bio__social-link a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------------
+   Blog: Related Posts
+   --------------------------------------------------------------------------- */
+.squirrels-related-posts {
+    background: var(--squirrels-surface, #FDF5EC);
+}
+
+.squirrels-related-posts__heading {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.squirrels-related-posts__grid {
+    gap: 1.25rem;
+}
+
+.squirrels-related-post-card__image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--squirrels-radius-md, 0.5rem);
+    display: block;
+}
+
+.squirrels-related-post-card__cat {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--squirrels-primary, #C94F10);
+    margin: 0.75rem 0 0.375rem;
+}
+
+.squirrels-related-post-card__title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0;
+}
+
+.squirrels-related-post-card__title a {
+    color: var(--squirrels-text, #1A1714);
+    text-decoration: none;
+}
+
+.squirrels-related-post-card__title a:hover {
+    color: var(--squirrels-primary, #C94F10);
+}
+
+/* ---------------------------------------------------------------------------
+   Blog: Categories
+   --------------------------------------------------------------------------- */
+.squirrels-blog-categories {
+    background: var(--squirrels-surface, #FDF5EC);
+}
+
+.squirrels-blog-categories__grid {
+    gap: 1rem;
+}
+
+.squirrels-category-card.is-style-squirrels-card {
+    min-width: 140px;
+    max-width: 180px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.squirrels-category-card.is-style-squirrels-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--squirrels-shadow-md);
+}
+
+.squirrels-category-card__icon {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem;
+    line-height: 1;
+}
+
+.squirrels-category-card__name {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+}
+
+.squirrels-category-card__name a {
+    color: var(--squirrels-text, #1A1714);
+    text-decoration: none;
+}
+
+.squirrels-category-card__name a:hover {
+    color: var(--squirrels-primary, #C94F10);
+}
+
+.squirrels-category-card__count {
+    font-size: 0.75rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Blog: Popular Posts
+   --------------------------------------------------------------------------- */
+.squirrels-popular-posts__heading {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--squirrels-primary, #C94F10);
+}
+
+.squirrels-popular-posts__list {
+    gap: 1rem;
+}
+
+.squirrels-popular-post {
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--squirrels-border, #e8e1d9);
+}
+
+.squirrels-popular-post:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.squirrels-popular-post__num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--squirrels-primary, #C94F10);
+    opacity: 0.25;
+    min-width: 2rem;
+    line-height: 1;
+    margin: 0;
+    padding-top: 0.1em;
+    letter-spacing: -0.04em;
+}
+
+.squirrels-popular-post__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 0.25rem;
+}
+
+.squirrels-popular-post__title a {
+    color: var(--squirrels-text, #1A1714);
+    text-decoration: none;
+}
+
+.squirrels-popular-post__title a:hover {
+    color: var(--squirrels-primary, #C94F10);
+}
+
+.squirrels-popular-post__meta {
+    font-size: 0.75rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Blog: Reading CTA
+   --------------------------------------------------------------------------- */
+.squirrels-reading-cta {
+    background: var(--squirrels-surface, #FDF5EC);
+}
+
+.squirrels-reading-cta__heading {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.squirrels-reading-cta__sub {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--squirrels-text-muted, #6b6560);
+}
+
+.squirrels-reading-cta__trust {
+    font-size: 0.8125rem;
+    color: var(--squirrels-text-muted, #6b6560);
+    margin-top: 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   T10.4 Responsive overrides
+   --------------------------------------------------------------------------- */
+@media ( max-width: 768px ) {
+    .squirrels-featured-posts__grid { flex-direction: column; }
+    .squirrels-related-posts__grid { flex-direction: column; }
+    .squirrels-blog-categories__grid { gap: 0.75rem; }
+    .squirrels-author-bio__inner { flex-direction: column; }
+}
